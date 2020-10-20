@@ -10,6 +10,7 @@ const SetCard =(props) => {
             <TouchableOpacity 
             style={card.container_sub}
             onPress={() => props.onDone()}
+            onLongPress={() => props.onRemove() }
             
             
             >

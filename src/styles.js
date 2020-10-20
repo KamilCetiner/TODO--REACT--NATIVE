@@ -19,7 +19,7 @@ const main = StyleSheet.create({
         color: '#3e2723'
     },
     text_2:{
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
         color: '#3e2723'
     }
@@ -27,30 +27,54 @@ const main = StyleSheet.create({
 
 const style_input = StyleSheet.create({
     container:{
-        backgroundColor:'#ff5722',
+        backgroundColor:'#9e9e9e',
         width: Dimensions.get('window').width * 0.70,
         height: Dimensions.get('window').height * 0.20,
         alignSelf: 'center',
+        borderRadius: 10,
         
     },
     container_sub:{
-        backgroundColor: '#ffccbc'
+        backgroundColor: 'white',
+        borderRadius: 10,
+        width: Dimensions.get('window').width * 0.60,
+        height: Dimensions.get('window').height * 0.05,
+        alignSelf: 'center',
+        marginTop:10
+
+        
     },
     text:{
-        fontSize: 20,
+        fontSize: 22,
         textAlign: 'center',
-        padding: 30
+        fontWeight: 'bold',
+        borderRadius: 10,
+        padding:5,
+        color:'white'
+    },
+
+    text_container:{
+        backgroundColor: '#546e7a',
+        marginVertical:25,
+        marginHorizontal:50,
+        borderRadius:20
+        
     }
 
 })
 
 const card = StyleSheet.create ({
     container_sub:{
-        backgroundColor:'red'
+        backgroundColor:'#ffccbc',
+        margin:10,
+        padding:10,
+        borderRadius:15,
+
         
     },
     text:{
         color: 'black',
+        
         
     }
 

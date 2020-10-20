@@ -26,7 +26,7 @@ const App = () => {
 
         const doneTodo = (todoId) => {
             const Array = [...list]
-            const todoIndex = list.findIndex(t => t.id == todoId)
+            const todoIndex = Array.findIndex(t => t.id == todoId)
 
             Array[todoIndex].isDone = !Array[todoIndex].isDone
             setList(Array);
@@ -34,15 +34,30 @@ const App = () => {
             
         }
 
+
+        const doneRemove = (todoId) => {
+           
+                const newArray = [...list]
+                const todoIndex = list.findIndex(item => item.id == todoId);
+
+                newArray.splice(todoIndex, 1);
+                setList(newArray)
+                
+           
+        }
+
         const renderItemData =({item})=>{
             return(
                 <SetCard
                 data={item}
                 onDone={()=> doneTodo(item.id) }
+                onRemove={() => doneRemove(item.id)}
                 
                 />
             )
         }
+
+
 
 
     return(
@@ -50,7 +65,7 @@ const App = () => {
 
             <View style={main.container_sub } >
                 <Text style={main.text_1}>TODO</Text>
-                <Text style={main.text_2}>10</Text>
+    <Text style={main.text_2}>{list.filter(t => t.isDone === false).length}</Text>
             </View>
 
             <FlatList
